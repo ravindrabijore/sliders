@@ -1,0 +1,119 @@
+/* .slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    max-width: calc(99vw - 2px); 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .slide {
+    display: inline-block;
+    width: 100vw;
+    transition: transform 0.5s ease; 
+  }
+  
+  .slide img {
+    width: 100vw;
+    height: 300px;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 10;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  button:first-of-type {
+    left: 0;
+  }
+  
+  button:last-of-type {
+    right: 0;
+  }
+  */
+
+  .slider-container {
+    height: 200px;
+    width: 600px; /* meant to hold 3 items */
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .left-btn, .right-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: limeGreen;
+  }
+  
+  .left-btn i, .right-btn i {
+   cursor: pointer; 
+  }
+  
+  .left-btn {
+    top: 100px;
+    left: 20px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .right-btn {
+    top: 100px;
+    right: -25px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .item-carousel {
+    position: relative;
+    right: 0;
+    font-size: 0;
+    width: 200%;
+    transform: translateX(-200px);
+  }
+  
+  .item {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: steelblue;
+    border: 3px solid yellow;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 164px;
+    user-select: none;
+    
+    &.active {
+      border: 3px solid black;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .container {
+      width: 200px; /* meant to hold 2 items */
+    }
+  }
+  
+  .slide-enter {
+    transform: translateX(0px);
+  }
